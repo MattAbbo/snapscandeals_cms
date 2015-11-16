@@ -15,4 +15,4 @@ production:
   <<: *default
   database: snapscandeals_production
   username: snapscandeals
-  password: <%= ENV['PHOTOS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['SNAPSCANDEALS_DATABASE_PASSWORD'] %>
