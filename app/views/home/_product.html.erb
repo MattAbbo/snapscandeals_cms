@@ -1,0 +1,40 @@
+<div class="col-sm-4 col-lg-4 col-md-4">
+  <div class="thumbnail">
+    <%= image_tag deal.main_image %>
+    <div class="caption">
+      <h4><%= deal.caption %></h4>
+      <h5><%= link_to deal.link_text, deal.link_url %></h5>
+      <p><%= deal.description %></p>
+
+      <% if deal.terms_and_conditions.any? -%>
+      <i><b>Terms and Conditions:</b></i>
+      <ul>
+        <% deal.terms_and_conditions.each do |tac| -%>
+          <li><i><%= tac %></i></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <tbody>
+          <tr align="center">
+            <td><b><h3>R<%= deal.you_pay_price %></h3></b>YOU PAY</td>
+            <td><h3>R<%= deal.retail_price %></h3>RETAIL</td>
+            <td><h3>R<%= deal.you_save_price %> (<%= deal.percentage_save %>%)</h3>YOU SAVE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ratings">
+      <p class="visible-xs" align="center">
+        <a href="<%= deal.snap_scan_link %>" target="_blank" class="btn btn-primary">Buy with SnapScan</b></a>
+      </p>
+    </div>
+    <div>
+      <%= image_tag(deal.snap_qr_code, class: 'hidden-xs') %>
+    </div>
+  </div>
+</div>
