@@ -2,14 +2,14 @@ class HomeController < ApplicationController
   def index;end
 
   def cape_town
-    @title_location = "Cape Town"
+    @location_name = "Cape Town"
   end
 
   def centurion
-    @title_location = "Centurion"
+    @location_name = "Centurion"
   end
 
   def johannesburg
-    @title_location = "Johannesburg"
+    @location_name = "Johannesburg"
   end
 end
