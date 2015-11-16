@@ -1,69 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Cape Town: SnapDeals</title>
-
-
-    <%= stylesheet_link_tag "bootstrap.min.css" %>
-    <%= stylesheet_link_tag "shop-homepage.css" %>
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./index.html">SnapScan Deals</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                          Choose Location<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="./cape-town.html">Cape Town</a></li>
-                            <li><a href="./johannesburg.html">Johannesburg</a></li>
-                            <li><a href="./centurion.html">Centurion</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="mailto:bizdev@snapscan.co.za?Subject=SnapScan%20Deals" target="_blank">Contact</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
 
     <!-- Page Content -->
     <div class="container">
@@ -84,7 +19,7 @@
                     <!-- PRODUCT ONE -->
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="./img/products/cape-town/deal-1.png" alt="">
+                            <%= image_tag 'products/cape-town/deal-1.png' %>
                             <div class="caption">
                                 <h4>One Hour Massage Treatment</h4>
                                 <h5><a href="https://www.facebook.com/hommemenspa">Homme Mens Spa - Cape Town CBD</a></h5>
@@ -119,7 +54,7 @@
                                 </p>
                             </div>
                             <div>
-                                <img class="hidden-xs" src="./img/products/cape-town/qr-1.png" alt="">
+                                <%= image_tag('products/cape-town/qr-1.png', class: 'hidden-xs') %>
                             </div>
                         </div>
                     </div>
@@ -127,7 +62,7 @@
                     <!-- PRODUCT 2 -->
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="./img/products/cape-town/deal-2.png" alt="">
+                            <%= image_tag 'products/cape-town/deal-2.png' %>
                             <div class="caption">
                                 <h4>Haircut</h4>
                                 <h5><a href="http://www.mensroom.co.za/">Mensroom - Diep River/Muizenberg</a></h5>
@@ -162,19 +97,19 @@
                                 </p>
                             </div>
                             <div>
-                                <img class="hidden-xs" src="./img/products/cape-town/qr-2.png" alt="">
+                                <%= image_tag('products/cape-town/qr-2.png', class: 'hidden-xs') %>
                             </div>
                         </div>
                     </div>
 
-                    
+
 
                     <!-- PRODUCT THREE -->
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="./img/products/cape-town/deal-3.png" alt="">
+                            <%= image_tag 'products/cape-town/deal-3.png' %>
                             <div class="caption">
-                                
+
                                 <h4>Full Body Brilliant Tan</h4>
                                 <h5><a href="https://www.facebook.com/Phat-Sam-Studio-178266982263891/">Phat Sam - Goodwood</a></h5>
                                 <p>Full Body Brilliant Tan SprayTan, including a Metallic Tattoo Sheet</p>
@@ -189,7 +124,7 @@
                                 </ul>
                                 </i>
                             </div>
-                            
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <tbody>
@@ -208,7 +143,7 @@
                                 </p>
                             </div>
                             <div>
-                                <img class="hidden-xs" src="./img/products/cape-town/qr-3.png" alt="">
+                                <%= image_tag('products/cape-town/qr-3.png', class: 'hidden-xs') %>
                             </div>
                         </div>
                     </div>
@@ -217,9 +152,9 @@
                     <!-- PRODUCT FIVE -->
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="./img/products/cape-town/deal-5.png" alt="">
+                            <%= image_tag('products/cape-town/deal-5.png', alt: '') %>
                             <div class="caption">
-                                
+
                                 <h4>Local Craft Beer Mixed Offer</h4>
                                 <h5><a href="http://www.cybercellar.com/">Cybercellar.com</a></h5>
                                 <p>A 24 bottle tasting journey of some of SA's hottest craft beers around town. Consisting of a well rounded mix of Jack Black ales and Cape Brewing Company's excellently crafted beers.</p>
@@ -236,7 +171,7 @@
                                 </ul>
                                 </i>
                             </div>
-                            
+
                             <div class="table-responsive">
                                 <table class="table">
                                     <tbody>
@@ -255,7 +190,7 @@
                                 </p>
                             </div>
                             <div>
-                                <img class="hidden-xs" src="./img/products/cape-town/qr-5.png" alt="">
+                                <%= image_tag('products/cape-town/qr-5.png', class: 'hidden-xs', alt: '') %>
                             </div>
                         </div>
                     </div>
@@ -263,9 +198,9 @@
                     <!-- PRODUCT FOUR-->
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="./img/products/cape-town/deal-4.png" alt="">
+                            <%= image_tag('products/cape-town/deal-4.png', alt: '') %>
                             <div class="caption">
-                                
+
                                 <h4>Individual Application Eyelash Extensions</h4>
                                 <h5><a href="https://www.facebook.com/Phat-Sam-Studio-178266982263891/">Phat Sam - Goodwood</a></h5>
                                 <p>Full Set Individual Application Eyelash Extensions, including a Brow Tint & Tidy & an EyeSlices Treatment</p>
@@ -317,8 +252,8 @@
                                 </p>
                             </div>
                             <div>
-                                <img class="hidden-xs" src="./img/products/cape-town/qr-4.png" alt="">
-                            </div> 
+                                <%= image_tag('products/cape-town/qr-4.png', class: 'hidden-xs', alt: '') %>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -327,7 +262,7 @@
 
                 </div>
 
-            
+
 
         </div>
 
@@ -335,32 +270,5 @@
 
 
 <!-- FOOTER -->
-        
-        <div class="container">
-        <footer>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>Copyright &copy; SnapScan 2015</p>
-                </div>
-            </div>
-        </footer>
-        </div>
 
-
-<!-- 
-<div id="footer"></div> -->
-
-
-
-
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+      
