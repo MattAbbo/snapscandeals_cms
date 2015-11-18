@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
-  def index;end
+  def index
+    @locations = Location.all
+  end
 
   def cape_town
     @location_name = "Cape Town"
