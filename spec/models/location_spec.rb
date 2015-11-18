@@ -13,7 +13,7 @@
 require 'rails_helper'
 
 RSpec.describe Location, type: :model do
-  it 'should be invalid for factory' do
+  it 'should be valid for factory' do
     location = build(:location)
     expect(location).to be_valid
   end
@@ -28,5 +28,9 @@ RSpec.describe Location, type: :model do
   it 'should be invalid without a image_url' do
     location = build(:location, image_url: nil)
     expect(location).to_not be_valid
+  end
+  it 'should have deals' do
+    location = build(:location)
+    expect(location.deals).to_not be_nil
   end
 end

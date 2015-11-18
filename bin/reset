@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+powder stop; rake db:drop db:create db:migrate db:seed; powder start

@@ -14,4 +14,6 @@ class Location < ActiveRecord::Base
   validates :name, presence: true
   validates :short_url, presence: true
   validates :image_url, presence: true
+
+  has_many :deals
 end

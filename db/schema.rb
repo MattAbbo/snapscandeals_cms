@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118190452) do
+ActiveRecord::Schema.define(version: 20151118202357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "deals", force: :cascade do |t|
+    t.string   "main_image"
+    t.string   "caption"
+    t.string   "link_url"
+    t.string   "link_text"
+    t.string   "description"
+    t.string   "terms_and_conditions"
+    t.integer  "you_pay_price"
+    t.integer  "retail_price"
+    t.integer  "you_save_price"
+    t.integer  "percentage_save"
+    t.string   "snap_scan_link"
+    t.string   "snap_qr_code"
+    t.integer  "location_id",          null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string   "name",       null: false
