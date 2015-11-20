@@ -12,7 +12,7 @@ class CreateDeals < ActiveRecord::Migration
       t.integer :you_save_price
       t.integer :percentage_save
       t.string :snap_scan_link
-      t.string :snap_qr_code
+      t.string :qr_code_image
 
       t.references :location, null: false
 

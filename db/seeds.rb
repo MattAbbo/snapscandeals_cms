@@ -6,12 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-cape_town = Location.create(name: "Cape Town", short_url: 'cape-town', image_url: 'cape-town.png')
-johannesburg = Location.create(name: "Johannesburg", short_url: 'johannesburg', image_url: 'johannesburg.png')
-centurion = Location.create(name: "Centurion", short_url: 'centurion', image_url: 'centurion.png')
+cape_town = Location.create!(name: "Cape Town", short_url: 'cape-town',)
+johannesburg = Location.create!(name: "Johannesburg", short_url: 'johannesburg')
+centurion = Location.create!(name: "Centurion", short_url: 'centurion')
 
-Deal.create(location: cape_town,
-  main_image: 'products/cape-town/deal-1.png',
+Deal.create!(location: cape_town,
   caption: 'One Hour Massage Treatment',
   link_url: 'https://www.facebook.com/hommemenspa',
   link_text: 'Homme Mens Spa - Cape Town CBD',
@@ -21,5 +20,4 @@ Deal.create(location: cape_town,
   retail_price: '480',
   you_save_price: '180',
   percentage_save: '45',
-  snap_scan_link: 'https://pos.snapscan.io/qr/SSDeals?&amount=30000&id=Homme_Massage',
-  snap_qr_code: 'products/cape-town/qr-1.png')
+  snap_scan_link: 'https://pos.snapscan.io/qr/SSDeals?&amount=30000&id=Homme_Massage')

@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151118202357) do
     t.integer  "you_save_price"
     t.integer  "percentage_save"
     t.string   "snap_scan_link"
-    t.string   "snap_qr_code"
+    t.string   "qr_code_image"
     t.integer  "location_id",          null: false
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20151118202357) do
   create_table "locations", force: :cascade do |t|
     t.string   "name",       null: false
     t.string   "short_url",  null: false
-    t.string   "image_url",  null: false
+    t.string   "map_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

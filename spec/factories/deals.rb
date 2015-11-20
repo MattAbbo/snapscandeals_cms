@@ -14,7 +14,7 @@
 #  you_save_price       :integer
 #  percentage_save      :integer
 #  snap_scan_link       :string
-#  snap_qr_code         :string
+#  qr_code_image        :string
 #  location_id          :integer          not null
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
@@ -33,7 +33,7 @@ FactoryGirl.define do
     you_save_price 140_00
     percentage_save 25
     snap_scan_link "/example_link"
-    snap_qr_code "/example_qr_code"
+    qr_code_image "/example_qr_code"
 
     location
   end

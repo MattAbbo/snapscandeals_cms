@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  name       :string           not null
 #  short_url  :string           not null
-#  image_url  :string           not null
+#  map_image  :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -23,10 +23,6 @@ RSpec.describe Location, type: :model do
   end
   it 'should be invalid without a short_url' do
     location = build(:location, short_url: nil)
-    expect(location).to_not be_valid
-  end
-  it 'should be invalid without a image_url' do
-    location = build(:location, image_url: nil)
     expect(location).to_not be_valid
   end
   it 'should have deals' do
