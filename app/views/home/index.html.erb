@@ -8,43 +8,46 @@
 <!--
       <br> -->
 
-      <div id="headerwrap">
+      <!-- <div id="headerwrap">
   	    <div class="container">
   			<div class="row">
   				<div class="col-lg-12">
-            <img src="landing.png" alt="SnapScan_Deals" style="width:100%">
+            <img src="/landing.png" alt="SnapScan_Deals" style="width:100%">
           </div>
   			</div>
         </div>
-  	   </div>
+  	   </div> -->
 
-      <!-- <div id="headerwrap" class="bgimg");>
+      <div id="headerwrap">
   	    <div class="container">
-  			<div class="row">
-  				<div class="col-lg-12">
-            <h1>SNAPSCAN DEALS</h1>
-  					<h5>The party is starting now.</h5>
+    			<div class="row">
+    				<div class="col-lg-12">
+              <h1>SNAPSCAN DEALS</h1>
+    					<h5>The party is starting now.</h5>
+            </div>
           </div>
-  			</div><!-- /row -->
-  	    <!-- </div>
-  	</div> -->
+  			</div>
+      </div>
 
     <!-- *****************************************************************************************************************
-     SERVICE LOGOS
+     LOCATIONS
      ***************************************************************************************************************** -->
      <div id="service">
       <div class="container">
         <div class="row centered">
-          <div class="col-md-4">
-            <i class="fa fa-contao"></i>
-            <h4>Cape Town</h4>
-            <p>Hipsters, hotdogs, mountains and sea.</p>
-            <p><br/><a href="#" class="btn btn-theme-2">Get hip.</a></p>
-          </div>
+          <% @locations.each do |location| %>
+            <div class="col-md-4">
+                <a href="<%= location.short_url %>">
+                    <%= image_tag location.map_image %>
+                </a>
+                <h4><a href="<%= location.short_url %>" class="btn btn-theme-2"><%= location.name %> Deals</b></a></h4>
+                <!-- <p>Hipsters, hotdogs, mountains and sea.</p> -->
+                <!-- <p><br/><a href="#" class="btn btn-theme-2">Get hip.</a></p> -->
+            </div>
+          <% end %>
         </div>
       </div><! --/container -->
      </div><! --/service -->
-
 
 
       <!-- ORIGINAL -->
@@ -67,94 +70,4 @@
             </div>
           <% end %>
         </div>
-
-        <div class="row">
-
-            <div class="col-md-12">
-
-                <!-- <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div> -->
-
-                <div class="row" align="center">
-
-
-                <!-- Small modal -->
-               <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-md">Join SnapDeals</button>
-
-                <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                  <div class="modal-dialog modal-md">
-                    <div class="modal-content">
-
-                    </div>
-                  </div>
-                </div> -->
-
-                <!-- SUBSCRIPTION -->
-                <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Join SnapDeals</button> -->
-<!--
-
-
-                <br>
-                </div>
-
-            </div>
-
     </div> -->
-    <!-- /.container -->
-
-
-
-            <!-- Modal -->
-            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">Join SnapDeals</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="recipient-name" class="control-label">Your email address:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Join</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-        </div> -->
-
-    </div>

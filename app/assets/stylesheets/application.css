@@ -42,7 +42,7 @@
  }
 
  .caption {
-     height: auto;
+     height: 228px;
      overflow: hidden;
  }
 
@@ -62,7 +62,10 @@
 
  .thumbnail {
      padding: 0;
-     height: auto;
+     height: 600px;
+     box-shadow: 0 1px 2px 0 rgba(0,0,0,.22);
+     border-radius: 6px;
+     overflow: hidden;
  }
 
  .thumbnail .caption-full {
@@ -307,7 +310,7 @@
  ################################################################# */
 
  #headerwrap {
-     /*background-color: #3778c2;*/
+     background-color: #3778c2;
      min-height: auto;
      padding-top: 30px;
      padding-bottom: 50px;
